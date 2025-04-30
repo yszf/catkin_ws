@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>odometry_calculator</name>
+  <version>0.1.0</version>
+  <description>
+    This package is designed to calculate the odometry based on the incoming odometry messages.
+    It subscribes to the /rtk_gps_node/odom topic, calculates the 2D and 3D distances traveled,
+    and publishes the results on the /APU/Nav/State/Odometer topic. Additionally, it saves the
+    total and current distances to a file periodically.
+  </description>
+  <maintainer email="your_email@example.com">Your Name</maintainer>
+  <license>BSD-3-Clause</license>
+  <author email="author_email@example.com">Author Name</author>
+  <url type="website">https://github.com/your_repo/odometry_calculator</url>
+  <url type="bugtracker">https://github.com/your_repo/odometry_calculator/issues</url>
+  <url type="repository">https://github.com/your_repo/odometry_calculator.git</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>roscpp</build_depend>
+  <build_depend>nav_msgs</build_depend>
+  <build_depend>std_msgs</build_depend>
+
+  <exec_depend>roscpp</exec_depend>
+  <exec_depend>nav_msgs</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+
+  <export>
+    <!-- Other tools can request additional information be placed here -->
+  </export>
+</package>
